@@ -1,0 +1,13 @@
+<ion-view view-title="Jobs">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-icon-left" ng-repeat="job in jobs" type="item-text-wrap" href="#/tab/jobs/{{job.web}}">
+          <i class="{{job.icon}}"></i>
+          <h2 ng-bind-html="job.name" ng-class="{'highlight' : job.highlight}"></h2>
+          <p ng-bind-html="job.description"></p>
+          <p ng-bind-html="job.date"></p>
+          <p ng-bind-html="job.location"></p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

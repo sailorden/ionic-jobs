@@ -1,1 +1,8 @@
 /* Empty. Add your own CSS if you like */
+h2.highlight{
+    color: #4581F5;
+    font-weight: 700;
+}
+.tabs-striped.tabs-color-light .tab-item.tab-item-active, .tabs-striped.tabs-color-light .tab-item.active, .tabs-striped.tabs-color-light .tab-item.activated{
+    border-top: solid #E3EAF4;
+}
