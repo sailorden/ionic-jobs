@@ -7,7 +7,7 @@ angular.module('starter.services', [])
  var jobs = {};
  $http({
       method: 'GET',
-      url: 'https://limitless-plains-1406.herokuapp.com/jobs'
+      url: 'https://limitless-plains-1406.herokuapp.com/jobs?push='+localStorage.getItem("pushId")
   }).
   success(function(response, status, headers, config) {
       jobs = response;
@@ -26,7 +26,7 @@ angular.module('starter.services', [])
     refresh: function(){
         var promise = $http({
             method: 'GET',
-            url: 'https://limitless-plains-1406.herokuapp.com/jobs'
+            url: 'https://limitless-plains-1406.herokuapp.com/jobs?push='+localStorage.getItem("pushId")
         }).
         success(function(response, status, headers, config) {
             return response;

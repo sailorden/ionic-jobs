@@ -20,15 +20,24 @@ module.exports = [
         "clobbers": [
             "window.open"
         ]
+    },
+    {
+        "file": "plugins/com.onesignal.plugins.OneSignal/www/OneSignal.js",
+        "id": "com.onesignal.plugins.OneSignal.OneSignal",
+        "clobbers": [
+            "OneSignal"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
     "com.ionic.keyboard": "1.0.4",
-    "org.apache.cordova.console": "0.2.13",
     "org.apache.cordova.device": "0.3.0",
-    "org.apache.cordova.inappbrowser": "0.6.0"
+    "org.apache.cordova.inappbrowser": "0.6.0",
+    "com.onesignal.plugins.OneSignal": "1.6.2",
+    "android.support.v4": "21.0.1",
+    "com.google.playservices": "21.0.0"
 }
 // BOTTOM OF METADATA
 });

@@ -22,5 +22,30 @@
             "type": "registry",
             "id": "org.apache.cordova.inappbrowser"
         }
+    },
+    "com.onesignal.plugins.onesignal": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/one-signal/OneSignal-Cordova-SDK",
+            "subdir": "."
+        }
+    },
+    "com.onesignal.plugins.OneSignal": {
+        "source": {
+            "type": "local",
+            "path": "/home/lucas/Descargas/package"
+        }
+    },
+    "android.support.v4": {
+        "source": {
+            "type": "registry",
+            "id": "android.support.v4"
+        }
+    },
+    "com.google.playservices": {
+        "source": {
+            "type": "registry",
+            "id": "com.google.playservices"
+        }
     }
 }
