@@ -23,18 +23,31 @@ angular.module('starter.services', [])
     remove: function(job) {
         jobs.splice(jobs.indexOf(job), 1);
     },
-    get: function(url) {
-        $http({
+    refresh: function(){
+        var promise = $http({
             method: 'GET',
-            url: 'https://limitless-plains-1406.herokuapp.com/job?id='+url
+            url: 'https://limitless-plains-1406.herokuapp.com/jobs'
         }).
         success(function(response, status, headers, config) {
-            //alert(JSON.stringify(response));
             return response;
         }).
         error(function(data, status, headers, config) {
             return null;
         });
+        return promise;
+    },
+    get: function(id){
+          var promise = $http({
+              method: 'GET',
+              url: 'https://limitless-plains-1406.herokuapp.com/job?url='+id
+          }).
+          success(function(response, status, headers, config) {
+              return response;
+          }).
+          error(function(data, status, headers, config) {
+              return null;
+          });
+      return promise;
     }
   };
 });

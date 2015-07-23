@@ -4,12 +4,30 @@
   The FriendsCtrl pulls data from the Friends service (service.js)
   The Friends service returns an array of friend data
 -->
-<ion-view view-title="{{job.web}}">
-  <ion-content class="padding">
-    <img ng-src="" style="width: 64px; height: 64px">
-    <p ng-bind="job.description">
+<ion-view view-title="{{job.name}}">
+  <ion-content class="">
+    <h4>{{job.description}}</h4>
+    <div class="list">
+        <a class="item item-icon-left" href="#">
+            <i class="icon {{job.icon}}"></i>
+            {{job.location}}
+        </a>
+        <a class="item item-icon-left" href="#">
+            <i class="icon ion-clock"></i>
+            Posted {{job.date}}
+        </a>
+        <a class="item item-icon-left" href="#">
+            <i ng-class="{'ion-checkmark-round':job.remote, 'ion-close-round':!job.remote}" class="icon"></i>
+            Allows Remote
+        </a>
+        <a class="item item-icon-left" href="{{job.web}}" target="_blank">
+            <i class="icon ion-android-open"></i>
+            {{job.web}}
+        </a>
+    </div>
+    <p ng-bind-html="job.descriptions" class="padding">
     </p>
-    <p ng-bind="job.instructions">
+    <p ng-bind-html="job.instructions" class="padding">
     </p>
   </ion-content>
 </ion-view>

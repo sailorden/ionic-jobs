@@ -20,7 +20,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       // org.apache.cordova.statusbar required
       StatusBar.styleLightContent();
     }
-    $ionicTabsDelegate.select(1);
+    $ionicTabsDelegate.select(0);
   });
 })
 
