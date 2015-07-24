@@ -26,8 +26,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
                   $state.go("tab.job-detail", {"jobId": jsonData.url})
               }
       }
-      window.plugins.OneSignal.init("10304582e-3164-11e5-ba58-b71da7ab405f",
-          {googleProjectNumber: "1144234217263", autoRegister: true},
+      window.plugins.OneSignal.init("0304582e-3164-11e5-ba58-b71da7ab405f",
+          {googleProjectNumber: "144234217263", autoRegister: true},
           didReceiveRemoteNotificationCallBack);
       window.plugins.OneSignal.registerForPushNotifications();
       window.plugins.OneSignal.getIds(function(ids) {
