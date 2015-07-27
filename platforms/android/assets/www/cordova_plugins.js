@@ -27,6 +27,13 @@ module.exports = [
         "clobbers": [
             "OneSignal"
         ]
+    },
+    {
+        "file": "plugins/nl.x-services.plugins.socialsharing/www/SocialSharing.js",
+        "id": "nl.x-services.plugins.socialsharing.SocialSharing",
+        "clobbers": [
+            "window.plugins.socialsharing"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -36,6 +43,7 @@ module.exports.metadata =
     "org.apache.cordova.device": "0.3.0",
     "org.apache.cordova.inappbrowser": "0.6.0",
     "com.onesignal.plugins.OneSignal": "1.6.2",
+    "nl.x-services.plugins.socialsharing": "4.3.19",
     "android.support.v4": "21.0.1",
     "com.google.playservices": "21.0.0"
 }

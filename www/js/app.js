@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ionic-material', 'ngCordova'])
 
 .run(function($ionicPlatform, $ionicTabsDelegate) {
   $ionicPlatform.ready(function() {
@@ -26,22 +26,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
                   $state.go("tab.job-detail", {"jobId": jsonData.url})
               }
       }
-      window.plugins.OneSignal.init("0304582e-3164-11e5-ba58-b71da7ab405f",
-          {googleProjectNumber: "144234217263", autoRegister: true},
+      window.plugins.OneSignal.init("0304582e-3164-11e5-ba58-b71da7ab405ff",
+          {googleProjectNumber: "1144234217263", autoRegister: true},
           didReceiveRemoteNotificationCallBack);
       window.plugins.OneSignal.registerForPushNotifications();
       window.plugins.OneSignal.getIds(function(ids) {
           localStorage.setItem("pushId", ids.userId);
-          var ionicjobs = new Firebase("https://ionic-jobs.firebaseio.com/push");
-          ionicjobs.once('value', function(snapshot){
-              for(var index in snapshot.val()) {
-                  if(snapshot.val()[index] != ids.userId){
-                      ionicjobs.push(ids.userId);
-                  }
-              }
-              if(!snapshot.exists())
-                  ionicjobs.push(ids.userId);
-          });
       });
   });
 })

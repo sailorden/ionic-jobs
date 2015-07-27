@@ -23,6 +23,10 @@
                         {
                             "xml": "<feature name=\"OneSignalPush\"><param name=\"android-package\" value=\"com.plugin.gcm.OneSignalPush\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SocialSharing\"><param name=\"android-package\" value=\"nl.xservices.plugins.SocialSharing\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -96,6 +100,12 @@
                             "xml": "<uses-permission android:name=\"com.ionicframework.jobs847584.permission.RECEIVE_ADM_MESSAGE\" />",
                             "count": 1
                         }
+                    ],
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        }
                     ]
                 }
             }
@@ -113,6 +123,9 @@
         },
         "com.onesignal.plugins.OneSignal": {
             "PACKAGE_NAME": "com.ionicframework.jobs847584"
+        },
+        "nl.x-services.plugins.socialsharing": {
+            "PACKAGE_NAME": "com.kuja.jobs"
         }
     },
     "dependent_plugins": {

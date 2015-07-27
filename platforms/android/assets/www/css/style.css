@@ -6,3 +6,15 @@ h2.highlight{
 .tabs-striped.tabs-color-light .tab-item.tab-item-active, .tabs-striped.tabs-color-light .tab-item.active, .tabs-striped.tabs-color-light .tab-item.activated{
     border-top: solid #E3EAF4;
 }
+
+.background-ionic{
+    background-image: url('../img/header.png');
+    background-size: cover;
+}
+.job-list{
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+}
+.job-description{
+    margin-top: 0px !important;
+}

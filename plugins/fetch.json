@@ -47,5 +47,12 @@
             "type": "registry",
             "id": "com.google.playservices"
         }
+    },
+    "nl.x-services.plugins.socialsharing": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git",
+            "subdir": "."
+        }
     }
 }

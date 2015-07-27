@@ -39,7 +39,7 @@ angular.module('starter.services', [])
     get: function(id){
           var promise = $http({
               method: 'GET',
-              url: 'https://limitless-plains-1406.herokuapp.com/job?url='+id
+              url: 'https://limitless-plains-1406.herokuapp.com/job?url='+id+'&push='+localStorage.getItem("pushId")
           }).
           success(function(response, status, headers, config) {
               return response;

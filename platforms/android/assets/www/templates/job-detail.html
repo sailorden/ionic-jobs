@@ -5,13 +5,22 @@
   The Friends service returns an array of friend data
 -->
 <ion-view view-title="{{job.name}}">
-  <ion-content class="">
-    <h4 class="padding">{{job.description}}</h4>
-    <div class="list">
-        <a class="item item-icon-left" href="#">
-            <i class="icon {{job.icon}}"></i>
-            {{job.location}}
-        </a>
+  <ion-content>
+      <div class="list condensed-space no-padding done done done done">
+          <div class="card stable-bg in" style="-webkit-transition-delay: 0.13s; transition-delay: 0.13s;">
+              <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse"
+                      style="background-image: url('{{job.locationPicture}}');background-size: cover;">
+                  <h3>{{job.description}}</h3>
+                  <p>{{job.location}}</p>
+                  <img style="-webkit-transition-delay: 0.02s; transition-delay: 0.02s;">
+              </a>
+              <button id="fab" class="button button-positive button-fab button-fab-bottom-right" ng-class="{'drop': dropIt}" ng-click="shareIt(job.name, job.description, job.url)">
+                  <i class="icon ion-social-twitter"></i>
+              </button>
+          </div>
+
+      </div>
+    <div class="list job-list">
         <a class="item item-icon-left" href="#">
             <i class="icon ion-clock"></i>
             Posted {{job.date}}
@@ -25,7 +34,7 @@
             {{job.web}}
         </a>
     </div>
-    <p ng-bind-html="job.descriptions" class="padding">
+    <p ng-bind-html="job.descriptions" class="padding job-description border-top">
     </p>
     <p ng-bind-html="job.instructions" class="padding">
     </p>

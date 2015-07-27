@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ionic-material', 'ngCordova'])
 
 .run(function($ionicPlatform, $ionicTabsDelegate) {
   $ionicPlatform.ready(function() {
@@ -32,16 +32,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       window.plugins.OneSignal.registerForPushNotifications();
       window.plugins.OneSignal.getIds(function(ids) {
           localStorage.setItem("pushId", ids.userId);
-          var ionicjobs = new Firebase("https://ionic-jobs.firebaseio.com/push");
-          ionicjobs.once('value', function(snapshot){
-              for(var index in snapshot.val()) {
-                  if(snapshot.val()[index] != ids.userId){
-                      ionicjobs.push(ids.userId);
-                  }
-              }
-              if(!snapshot.exists())
-                  ionicjobs.push(ids.userId);
-          });
       });
   });
 })
